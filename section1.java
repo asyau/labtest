@@ -8,6 +8,24 @@ public class section1 {
     public static void displayMenu() {
         System.out.println("Enter your choice(enter exit to quit)\n1) Find the minimum and the maximum of the array\n2) Find the average of the array\n3) Find the sum of elements with odd- and even-numbered indexes");
     }
+    public static int  findMin(int[] arr){
+        int minNum = 100;
+        for(int i = 0; i < arr.length; i ++){
+            if(arr[i]<minNum){
+                minNum = arr[i];
+            }
+        }
+        return minNum;
+    }
+    public static int  findMax(int[] arr){
+        int maxNum = 0;
+        for(int i = 0; i > arr.length; i ++){
+            if(arr[i]<maxNum){
+                maxNum = arr[i];
+            }
+        }
+        return maxNum;
+    }
     public static void getChoice() {
         do {
             String choice;
