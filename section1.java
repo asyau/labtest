@@ -67,7 +67,28 @@ public class section1 {
 
         return finalArr;
     }
-    
+     public static int[] sum (int[]numbers){
+        int size = numbers.length;
+        int oddSum=0;
+        int evenSum=0;
+        int[] sums= new int[2];
+        for(int i =0; i<size;i++){
+            if (numbers[i]%2==1) {
+                oddSum+=numbers[i];
+                
+            }
+            else{
+                evenSum+=numbers[i];
+            }
+            
+            // index 0 the sums is sum of odd numbers and index 1 is the sum of even numbers
+            sums[0]=oddSum;
+            sums[1]=evenSum;
+
+            
+        }
+        return sums;
+    }
     public static void main(String[] args) {
          // Given an array size, create an int array that contains random integers in the range [0,100].
          // All the remaining functionality will operate on this array.
