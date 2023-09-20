@@ -44,6 +44,30 @@ public class section1 {
         } while (!choice.equals("exit"));
 
     }
+
+    public static double getAverage(int[] arr) {
+
+        double total = 0;
+
+        for (int i : arr) {
+            total += i;
+        }
+
+        return total / arr.length;
+    }
+
+    public static double[] differenceWithAverage(int[] arr) {
+        double average = getAverage(arr);
+
+        double[] finalArr = new double[arr.length];
+        
+        for (int i = 0; i < arr.length; i++) {
+            finalArr[i] = arr[i] - average;
+        }
+
+        return finalArr;
+    }
+    
     public static void main(String[] args) {
          // Given an array size, create an int array that contains random integers in the range [0,100].
          // All the remaining functionality will operate on this array.
